@@ -16,12 +16,12 @@ oprtn = raw_input ('\nChoose the operation (+,-,/,*):  ')
 
 
 if oprtn == '+':
-	print ('\nThe answer is '+ str(num1+num2) + '\n')
+	print ('\nThe answer is '+ str(int(num1)+int(num2)) + '\n')
 elif oprtn == '-':
-	print ('\nThe answer is '+ str(num1-num2) + '\n')
+	print ('\nThe answer is '+ str(int(num1)-int(num2)) + '\n')
 elif oprtn == '/':
-	print ('\nThe answer is '+ str(float(num1/num2)) + '\n')
+	print ('\nThe answer is '+ str(float(num1)/float(num2)) + '\n')
 elif oprtn == '*':
-	print ('\nThe answer is '+ str(num1*num2) + '\n')
+	print ('\nThe answer is '+ str(int(num1)*int(num2)) + '\n')
 else:
 	print ('\n----- Opertation Invalid ! -----\n')
