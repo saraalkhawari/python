@@ -1,5 +1,4 @@
 ''' 
-
 OUTPUT:
 ======================================================== 
 |Welcome to HR Pro 2019
@@ -159,12 +158,3 @@ while option != 5 :
 	else :
 		print('\n\n<==Exiting==>\n\n')
 		option = 5
-
-
-
-
-
-
-
-
-
