@@ -1,4 +1,5 @@
 ''' 
+
 OUTPUT:
 ======================================================== 
 |Welcome to HR Pro 2019
@@ -89,25 +90,18 @@ class Employee:
 		working_years = today.year-int(self.employment_date)
 		return working_years
 
-class Manager: 
-
+class Manager (Employee): 
 	def __init__(self ,name , age , salary , employment_date , bonus_percentage):	
-		self.name = name
-		self.age = age
-		self.salary = salary
-		self.employment_date = employment_date
+		super().__init__(name , age , salary , employment_date)
 		self.bonus_percentage = bonus_percentage
-	def get_working_years(self):
-		working_years =  today.year - int(self.employment_date)
-		return working_years
 	def get_bonus(self):
 		bounus = float(self.salary)*float(self.bonus_percentage)
 		return bounus
 
 
 
-Employees=[]
-Managers=[]
+employees=[]
+managers=[]
 
 option = 0
 
@@ -120,13 +114,13 @@ while option != 5 :
 	option = int(input ('\n\t1. Show Employees\n\t2. Show Managers\n\t3. Add An Employee\n\t4. Add A Manager\n\t5. Exit\nWhat would you like to do? \n'))
 
 	if option == 1: 
-		for n in Employees:
+		for n in employees:
 			print('-----------------')
 			print ('Name: {} Age: {} Salary: {} Working Years: {}'.format(n.name,n.age,n.salary,(n.get_working_years())))
 			print('-----------------')
 
 	elif option == 2: 
-		for n in Managers:
+		for n in managers:
 			print('-----------------')
 			print ('Name: {} Age: {} Salary: {} Working Years: {} Bonus: {}'.format(n.name,n.age,n.salary,n.get_working_years(),n.get_bonus()))
 			print('-----------------')
@@ -139,7 +133,7 @@ while option != 5 :
 		salary = input('Salary: ')
 		employment_date= input('Employement year: ') 
 		e=Employee(name , age , salary , employment_date)
-		Employees.append(e)
+		employees.append(e)
 		print ('\nEmployee added succesfully!')
 		print('-----------------')
 
@@ -152,9 +146,18 @@ while option != 5 :
 		employment_date= input('Employement year: ') 
 		bonus_percentage=float(input('Bonus Percentage: '))
 		m=Manager(name , age , salary , employment_date , bonus_percentage)
-		Managers.append(m)
+		managers.append(m)
 		print ('Manager is added succesfully!')
 		print('-----------------')
 	else :
 		print('\n\n<==Exiting==>\n\n')
 		option = 5
+
+
+
+
+
+
+
+
+
