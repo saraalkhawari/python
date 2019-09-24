@@ -116,13 +116,13 @@ while option != 5 :
 	if option == 1: 
 		for n in employees:
 			print('-----------------')
-			print ('Name: {} Age: {} Salary: {} Working Years: {}'.format(n.name,n.age,n.salary,(n.get_working_years())))
+			print ('Name: %s Age: %s Salary: %s Working Years: %s' %(n.name,n.age,n.salary,(n.get_working_years())))
 			print('-----------------')
 
 	elif option == 2: 
 		for n in managers:
 			print('-----------------')
-			print ('Name: {} Age: {} Salary: {} Working Years: {} Bonus: {}'.format(n.name,n.age,n.salary,n.get_working_years(),n.get_bonus()))
+			print ('Name: %s Age: %s Salary: %s Working Years: %s Bonus: %s' %(n.name,n.age,n.salary,n.get_working_years(),n.get_bonus()))
 			print('-----------------')
 
 	elif option == 3: 
@@ -135,9 +135,11 @@ while option != 5 :
 		e=Employee(name , age , salary , employment_date)
 		employees.append(e)
 		print ('\nEmployee added succesfully!')
+
 		print('-----------------')
 
 	elif option == 4: 
+
 		print('-----------------')
 		
 		name= input('Name: ')
@@ -148,6 +150,7 @@ while option != 5 :
 		m=Manager(name , age , salary , employment_date , bonus_percentage)
 		managers.append(m)
 		print ('Manager is added succesfully!')
+		
 		print('-----------------')
 	else :
 		print('\n\n<==Exiting==>\n\n')
