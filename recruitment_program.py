@@ -38,7 +38,7 @@ cv ={}
 
 print('\nWelcome to the special recruitment program, \nplease answer the following questions:')
 
-cv['name'] = raw_input('\nWhat\'s your name?  ')
+cv['name'] = input('\nWhat\'s your name?  ')
 
 cv['age'] = input('\nHow old are you?  ')
 
@@ -48,17 +48,18 @@ cv['skills'] = []
 
 print('\n\tSkills:\n')
 
-for i,n in enumerate(skills_list):
-	print('\t\t{}. {}'.format(i+1,n))
+for i,n in  enumerate(skills_list):
+	print('\t\t%s. %s'%(i+1,n))
 
-cv['skills'].append(skills_list[input('\nChoose a skill from above by entering its number: ')-1])
+cv['skills'].append(skills_list[int(input('\nChoose a skill from above by entering its number: '))-1])
 
-cv['skills'].append(skills_list[input('\nChoose another skill from above by entering its number: ')-1])
+cv['skills'].append(skills_list[int(input('\nChoose another skill from above by entering its number: '))-1])
 
-if (int(cv['age']) > 20) & (int(cv['age']) < 36) & (int(cv['experience']) >= 2) & ('Worker' in cv['skills']) :
-	print ('\nYou have been accepted, {}\n'.format(cv['name']))
+
+if (int(cv['age']) > 20) & (int(cv['age']) < 36 )& (int(cv['experience']) >= 2 )& ('Worker' in cv['skills']) : #skill 2 
+	print ('\nYou have been accepted, %s\n'%(cv['name']))
 else:
-	print ('\n!! {}, You Do not fit our criteria!!\n'.format(cv['name']))
+	print ('\n!! %s , You Do not fit our criteria !!\n'%(cv['name']))
 
 
 print('\n')
